@@ -1,0 +1,25 @@
+{
+    "last_updated": "Fri, 29 Apr 2022 05:03:34 GMT",
+    "routes": [
+        {
+            "file_path": "views/tv_shows/tv_shows_view.dart",
+            "route_name": "tv_showsViewRoute",
+            "view_name": "TvShowsView"
+        },
+        {
+            "file_path": "views/favorite_tv_shows/favorite_tv_shows_view.dart",
+            "route_name": "favorite_tv_showsViewRoute",
+            "view_name": "FavoriteTvShowsView"
+        },
+        {
+            "file_path": "views/bottom_navbar/bottom_navbar_view.dart",
+            "route_name": "bottom_navbarViewRoute",
+            "view_name": "BottomNavbarView"
+        },
+        {
+            "file_path": "views/search_shows/search_shows_view.dart",
+            "route_name": "search_showsViewRoute",
+            "view_name": "SearchShowsView"
+        }
+    ]
+}
