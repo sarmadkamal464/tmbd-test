@@ -60,12 +60,18 @@ class TvShowsViewModel extends FutureViewModel {
   // update favorite list in local storage
   Future<void> updateFavoriteList({int index, int id}) async {
     isFavoriteList[index] = !isFavoriteList[index];
-    if (!getFavoriteList.contains(id)) {
+    if (getFavoriteList == null) {
+      getFavoriteList = [];
       getFavoriteList.add(id);
       await UserSecureStorage.setFavorites(getFavoriteList);
     } else {
-      getFavoriteList.remove(id);
-      await UserSecureStorage.setFavorites(getFavoriteList);
+      if (!getFavoriteList.contains(id)) {
+        getFavoriteList.add(id);
+        await UserSecureStorage.setFavorites(getFavoriteList);
+      } else {
+        getFavoriteList.remove(id);
+        await UserSecureStorage.setFavorites(getFavoriteList);
+      }
     }
     notifyListeners();
   }
