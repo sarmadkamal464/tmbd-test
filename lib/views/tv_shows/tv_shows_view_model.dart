@@ -44,7 +44,6 @@ class TvShowsViewModel extends FutureViewModel {
     isLoading = true;
     selectedIndex = -1;
     favoriteList = [];
-    getFavoriteList = [];
     isFavoriteList = List<bool>.filled(20, false, growable: true);
   }
 
